@@ -6,7 +6,7 @@
 /*   By: joafaust <joafaust@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/17 21:31:04 by joafaust          #+#    #+#             */
-/*   Updated: 2024/06/05 10:17:02 by joafaust         ###   ########.fr       */
+/*   Updated: 2024/06/05 12:03:52 by joafaust         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,3 +34,24 @@ char	*get_next_line(int fd)
 	}
 	return (line);
 }
+
+/* int	main(void)
+{
+	FILE *file;
+	char *line;
+
+	file = fopen("test1.txt", "r");
+	if (!file)
+	{
+		perror("Error opening file");
+		return (1);
+	}
+	while ((line = get_next_line(fileno(file))) != NULL)
+	{
+		printf("%s\n", line);
+		free(line);
+	}
+	printf("BUFFER SIZE: %i\n", BUFFER_SIZE);
+	fclose(file);
+	return (0);
+} */
