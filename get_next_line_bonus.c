@@ -6,7 +6,7 @@
 /*   By: joafaust <joafaust@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/17 21:30:46 by joafaust          #+#    #+#             */
-/*   Updated: 2024/06/05 12:06:32 by joafaust         ###   ########.fr       */
+/*   Updated: 2024/06/05 15:41:44 by joafaust         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*get_next_line(int fd)
 	int			i;
 
 	i = 0;
-	if (read(fd, 0, 0) < 0 || BUFFER_SIZE < 1 || fd >= FOPEN_MAX)
+	if (fd < 0 || BUFFER_SIZE < 1 || fd >= FOPEN_MAX)
 	{
 		if (fd > 0 && fd < FOPEN_MAX)
 			while (buff[fd][i])
@@ -58,8 +58,14 @@ char	*get_next_line(int fd)
 	free(test1);
 	free(test2);
 	free(test3);
-
+    printf("BUFFER SIZE: %i\n" BUFFER_SIZE);
+    
 	close(fd[0]);
 	close(fd[1]);
 	close(fd[2]);
+    printf("test1: %s\n", get_next_line(-1));
+    printf("test1: %s\n", get_next_line(42));
+    printf("test1: %s\n", get_next_line(0));
+    printf("test1: %s\n", get_next_line(1));
+    printf("test1: %s\n", get_next_line(2));
 }*/
