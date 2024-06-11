@@ -6,7 +6,7 @@
 /*   By: joafaust <joafaust@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/17 21:30:57 by joafaust          #+#    #+#             */
-/*   Updated: 2024/06/05 11:55:01 by joafaust         ###   ########.fr       */
+/*   Updated: 2024/06/06 12:47:20 by joafaust         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ char	*ft_strjoin(char *str1, char *str2)
 	return (retn);
 }
 
-int	nl(char *buf)
+int	newline(char *buf)
 {
 	int	i;
 	int	a;

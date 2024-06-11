@@ -6,7 +6,7 @@
 /*   By: joafaust <joafaust@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/17 21:30:46 by joafaust          #+#    #+#             */
-/*   Updated: 2024/06/05 15:41:44 by joafaust         ###   ########.fr       */
+/*   Updated: 2024/06/06 16:07:56 by joafaust         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,13 +30,13 @@ char	*get_next_line(int fd)
 	while (*(buff[fd]) || read(fd, buff[fd], BUFFER_SIZE) > 0)
 	{
 		line = ft_strjoin(line, buff[fd]);
-		if (nl(buff[fd]) == 1)
+		if (newline(buff[fd]) == 1)
 			break ;
 	}
 	return (line);
 }
 
-/*int main()
+/* int main()
 {
 	int fd[3];
 
@@ -58,14 +58,14 @@ char	*get_next_line(int fd)
 	free(test1);
 	free(test2);
 	free(test3);
-    printf("BUFFER SIZE: %i\n" BUFFER_SIZE);
-    
+	printf("BUFFER SIZE: %i\n", BUFFER_SIZE);
+	
 	close(fd[0]);
 	close(fd[1]);
 	close(fd[2]);
-    printf("test1: %s\n", get_next_line(-1));
-    printf("test1: %s\n", get_next_line(42));
-    printf("test1: %s\n", get_next_line(0));
-    printf("test1: %s\n", get_next_line(1));
-    printf("test1: %s\n", get_next_line(2));
-}*/
+	// printf("test1: %s\n", get_next_line(-1));
+	// printf("test1: %s\n", get_next_line(42));
+	// printf("test1: %s\n", get_next_line(0));
+	// printf("test1: %s\n", get_next_line(1));
+	// printf("test1: %s\n", get_next_line(2));
+} */
