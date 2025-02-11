@@ -23,8 +23,8 @@ The bonus part extends the project with the following:
   - Enhanced buffer management for performance optimization.
 # Implementation Details
 **Buffer Size**
-  - The function should use a defined BUFFER_SIZE to read chunks of data.
-  - BUFFER_SIZE is a macro that can be adjusted to improve performance.
+  - The function should use a defined ```BUFFER_SIZE``` to read chunks of data.
+  - ```BUFFER_SIZE``` is a macro that can be adjusted to improve performance.
 **Static Variable**
   - A static variable is used to store leftover data from previous reads.
   - This allows the function to keep track of data between function calls efficiently.
