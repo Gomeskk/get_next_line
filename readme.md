@@ -12,35 +12,35 @@ The main challenge of **get_next_line** (GNL) is to read from a file descriptor 
  ```
 
   - The function should:
-  - Return a line from the given file descriptor, including the newline (\n) if present.
-  - Manage static variables to store data between function calls.
-  - Work for any valid file descriptor, including standard input (stdin).
-  - Handle multiple file descriptors simultaneously.
-  - Properly allocate and free memory to prevent leaks.
+    - Return a line from the given file descriptor, including the newline (\n) if present.
+    - Manage static variables to store data between function calls.
+    - Work for any valid file descriptor, including standard input (stdin).
+    - Handle multiple file descriptors simultaneously.
+    - Properly allocate and free memory to prevent leaks.
 # Bonus Features
 The bonus part extends the project with the following:
   - The ability to handle multiple file descriptors at the same time.
   - Enhanced buffer management for performance optimization.
 # Implementation Details
-**Buffer Size**
+### Buffer Size 
   - The function should use a defined ```BUFFER_SIZE``` to read chunks of data.
   - ```BUFFER_SIZE``` is a macro that can be adjusted to improve performance.
-**Static Variable**
+### Static Variable
   - A static variable is used to store leftover data from previous reads.
   - This allows the function to keep track of data between function calls efficiently.
-**Memory Management**
+### Memory Management
   - Proper allocation (malloc) and deallocation (free) are crucial to avoid leaks.
   - Edge cases like empty files, large files, or files without newlines must be handled correctly.
 ## Compilation and Usage
 To compile the project, use:
 
-```
+```console
 cc -Wall -Wextra -Werror -D BUFFER_SIZE=42 get_next_line.c get_next_line_utils.c -o gnl
 ```
 
 To test the function:
 
-```
+```console
 ./gnl < file.txt
 ```
 
