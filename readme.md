@@ -45,9 +45,9 @@ To test the function:
 ```
 
 ## Common Pitfalls
-  - The end of the file is not being handled properly.
-  - Memory leaks due to improper freeing of allocated memory.
-  - Incorrect handling of static variables leads to unwanted behavior.
-  - Not considering different file descriptors when handling the bonus.
+  - $\color{crimson}{\textbf{The end of the file is not being handled properly}}$.
+  - $\color{crimson}{\textbf{Memory leaks}}$ due to improper freeing of allocated memory.
+  - $\color{crimson}{\textbf{Incorrect handling of static variables}}$ leads to unwanted behavior.
+  - $\color{crimson}{\textbf{Not considering different file descriptors}}$ when handling the bonus.
 ## Conclusion
 The Get Next Line project is a great exercise in file handling, memory management, and efficient programming. By successfully implementing this function, students gain a deeper understanding of working with file descriptors and dynamic memory allocation in C.
